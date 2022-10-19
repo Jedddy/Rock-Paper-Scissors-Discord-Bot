@@ -1,0 +1,11 @@
+# virtual environment
+.venv
+
+# pycaches
+__pycache__
+
+# token
+TOKEN.env
+
+# database
+leaderboards.db
