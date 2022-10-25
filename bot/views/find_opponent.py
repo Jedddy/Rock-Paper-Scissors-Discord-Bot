@@ -6,7 +6,6 @@ class FindOpponent(discord.ui.View):
     def __init__(self, p1: discord.Member, timeout):
         super().__init__(timeout=timeout)
         self.p1 = p1
-        self.timeout = timeout
 
     @discord.ui.button(label="Accept", style=discord.ButtonStyle.green)
     async def opponent_accepted(self, interaction: discord.Interaction, button: discord.Button):
