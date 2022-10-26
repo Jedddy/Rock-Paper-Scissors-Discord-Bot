@@ -12,9 +12,7 @@ class Move(ABC):
         pass 
 
     def __eq__(self, other):
-        if type(self) == type(other):
-            return True
-        return False
+        return type(self) == type(other)
 
         
 class Rock(Move):
@@ -22,41 +20,29 @@ class Rock(Move):
         return "Rock"
     
     def __lt__(self, other):
-        if type(other) == Paper:
-            return True
-        return False
+        return type(other) == Paper
     
     def __gt__(self, other):
-        if type(other) == Scissors:
-            return True
-        return False
-
+        return type(other) == Scissors
+            
 
 class Paper(Move):
     def __str__(self):
         return "Paper"
     
     def __lt__(self, other):
-        if type(other) == Scissors:
-            return True
-        return False
+        return type(other) == Scissors
     
     def __gt__(self, other):
-        if type(other) == Rock:
-            return True
-        return False
-
+        return type(other) == Rock
 
 class Scissors(Move):
     def __str__(self):
         return "Scissors"
 
     def __lt__(self, other):
-        if type(other) == Rock:
-            return True
-        return False
+        return type(other) == Rock
     
     def __gt__(self, other):
-        if type(other) == Paper:
-            return True
-        return False
+        return type(other) == Paper
+         

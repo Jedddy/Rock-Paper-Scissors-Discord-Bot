@@ -19,7 +19,7 @@ class Help(commands.Cog):
             description="Some fun commands!",
             color=discord.Color.blue()
         )
-        embed.add_field(name="Fun", value="\n\n".join(_help for _help in helps_list))
+        embed.add_field(name="Fun", value="\n\n".join(helps_list))
         await interaction.response.send_message(embed=embed)
 
 

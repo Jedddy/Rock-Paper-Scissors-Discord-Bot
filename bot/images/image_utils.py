@@ -35,7 +35,7 @@ async def vs_image(*, p1_image, p2_image):
 
 async def result_image(*, image, p1_move, p2_move):
     p1_move = Editor(moves_sprite.format(move=p1_move)).resize(pfp_resize)
-    p2_move = Editor(moves_sprite.format(move=p2_move + "_right")).resize(pfp_resize)
+    p2_move = Editor(moves_sprite.format(move=f"{p2_move}_right")).resize(pfp_resize)
     bg = Editor(image)
     bg.paste(p1_move, position=p1_move_pos)
     bg.paste(p2_move, position=p2_move_pos)

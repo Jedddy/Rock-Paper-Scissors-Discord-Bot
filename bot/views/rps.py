@@ -7,7 +7,7 @@ from utils.embed_helper import vs_embed
 class RPS(discord.ui.View):
     """Challenge view class"""
     def __init__(self, p1: discord.Interaction, p2: discord.Member, timeout: int):
-        super().__init__(timeout=timeout if timeout else 30)
+        super().__init__(timeout=timeout or 30)
         self.p1 = p1
         self.p2 = p2
 

@@ -39,10 +39,8 @@ class Game(commands.Cog):
             await interaction.response.send_message(
                 embed=duel_embed,
                 view=challenge_view)
-        elif member.id == interaction.user.id:
-            await interaction.response.send_message("You cannot duel yourself!", ephemeral=True)
         else:
-            await interaction.response.send_message("An error has occured", ephemeral=True)
+            await interaction.response.send_message("You cannot duel yourself!", ephemeral=True)
 
     @app_commands.command(name="leaderboards", description="View Top 10 Rock Paper, Scissors players.")
     async def leaderboard(self, interaction: discord.Interaction):
